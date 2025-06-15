@@ -162,10 +162,10 @@ This project is a **prototype** and should be thoroughly validated before being 
 
 ## 👤 Author
 
-**[Your Name]** – Data Engineering / Analytics at [Your Company]
+**[Gio]**
 
 ---
 
 ## 📄 License
 
-MIT License (or your company’s license policy)
+N/A for now...
