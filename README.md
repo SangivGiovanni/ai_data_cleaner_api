@@ -163,6 +163,7 @@ This project is a **prototype** and should be thoroughly validated before being 
 ## 👤 Author
 
 **[Gio]**
+**[Gareth]**
 
 ---
 

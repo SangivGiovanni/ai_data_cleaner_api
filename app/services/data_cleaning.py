@@ -6,7 +6,7 @@ import httpx
 import re
 from dotenv import load_dotenv
 from openai import AzureOpenAI
-from app.config import UPLOAD_FOLDER
+from app.config import UPLOAD_FOLDER, config
 
 logger = logging.getLogger(__name__)
 
@@ -32,7 +32,7 @@ def detect_header_row_gpt(raw_df):
     """
     try:
         response = client.chat.completions.create(
-            model=os.getenv("AZURE_OPENAI_API_DEPLOYMENT_NAME"),
+            model=config.get("deployment_name"),
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt}
@@ -62,7 +62,7 @@ def get_column_mapping_gpt(template_columns, messy_columns):
     """
     try:
         response = client.chat.completions.create(
-            model=os.getenv("AZURE_OPENAI_API_DEPLOYMENT_NAME"),
+            model=config.get('deployment_name'),
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt}
